@@ -14,7 +14,7 @@
 ## 一键脚本  
 * 使用脚本快速中转你的流量，仅适用于STSDUST家默认开通的CentOS7.7模版机型  
 * 在NAT策略已经配置好的情况下，ssh进入机器，使用此脚本直接进入配置中转阶段  
-* `bash <(curl https://github.com/stsdust/EasySTSDUST/raw/master/easy_stsdust.sh)`  
+* `bash <(curl https://raw.githubusercontent.com/stsdust/EasySTSDUST/master/easy_stsdust.sh)`  
 ## 完整食用教程  
 ***
 * 先进入官网，如图所示点击左侧侧边栏"产品服务">>"我的服务"。选择要进行端口转发的实例，并点击机子名称：  
@@ -34,7 +34,7 @@
 
 ***
 * SSH进入你的机器，并执行下方命令中，根据图片内容设置中转：  
-* `bash <(curl https://github.com/stsdust/EasySTSDUST/raw/master/easy_stsdust.sh)`  
+* `bash <(curl https://raw.githubusercontent.com/stsdust/EasySTSDUST/master/easy_stsdust.sh)`  
 ![5.png](https://i.loli.net/2020/05/09/2Ue45GksmQbjhwB.png)  
 
 ### 到此一切设置完毕，尽情享受STSDUST的产品为你带来的愉悦吧 :)  
