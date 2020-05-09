@@ -13,4 +13,4 @@ iptables -t nat -F
 iptables -t raw -F
 iptables -t mangle -F
 service iptables save
-wget -O natcfg.sh https://raw.githubusercontent.com/stsdust/iptablesUtils/master/natcfg_modified.sh && bash natcfg.sh
+wget -O natcfg.sh https://github.com/stsdust/EasySTSDUST/raw/master/natcfg_modified.sh && chmod +x natcfg.sh && bash natcfg.sh
