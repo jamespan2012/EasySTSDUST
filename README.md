@@ -14,23 +14,27 @@
 ## 一键脚本  
 * 使用脚本快速中转你的流量，仅适用于STSDUST家默认开通的CentOS7.7模版机型  
 * 在NAT策略已经配置好的情况下，ssh进入机器，使用此脚本直接进入配置中转阶段  
-* ``
+* `bash <(curl https://github.com/stsdust/EasySTSDUST/raw/master/easy_stsdust.sh)`  
 ## 完整食用教程  
 ***
 * 先进入官网，如图所示点击左侧侧边栏"产品服务">>"我的服务"。选择要进行端口转发的实例，并点击机子名称：  
-![1.png](https://i.loli.net/2020/05/09/5xD1NgmwUkQ84Os.png)
+![1.png](https://i.loli.net/2020/05/09/5xD1NgmwUkQ84Os.png)  
+
 ***
 * 为了保证顺利实现转发，首先确认安全组策略设置正确，具体如图所示：  
-![2.png](https://i.loli.net/2020/05/09/unE26FBdPvCgSmH.png)
+![2.png](https://i.loli.net/2020/05/09/unE26FBdPvCgSmH.png)  
+
 ***
 * 建立NAT转发策略，所有的端口转发都要在这里新建策略：  
-![3.png](https://i.loli.net/2020/05/09/AsH2G5ZYecOxNhK.png)
+![3.png](https://i.loli.net/2020/05/09/AsH2G5ZYecOxNhK.png)  
+
 ***
 * 以SSH服务为例说明如何实现端口转发：  
-![4.png](https://i.loli.net/2020/05/09/sDpQ9uKNMUBbAoE.png)
+![4.png](https://i.loli.net/2020/05/09/sDpQ9uKNMUBbAoE.png)  
+
 ***
 * SSH进入你的机器，并执行下方命令中，根据图片内容设置中转：  
-* wget -O stsdust.sh xxxxx && chmod +x natcfg.sh && ./natcfg.sh
-![5.png](https://i.loli.net/2020/05/09/2Ue45GksmQbjhwB.png)
+* `bash <(curl https://github.com/stsdust/EasySTSDUST/raw/master/easy_stsdust.sh)`  
+![5.png](https://i.loli.net/2020/05/09/2Ue45GksmQbjhwB.png)  
 
-### 到此一切设置完毕，尽情享受STSDUST的产品为你带来的愉悦吧:)  
+### 到此一切设置完毕，尽情享受STSDUST的产品为你带来的愉悦吧 :)  
