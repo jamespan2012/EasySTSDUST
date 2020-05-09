@@ -13,7 +13,7 @@ echo -e "${red}注意2${black}: 到IP的转发规则在重启后会失效，这�
 echo -e "${red}注意3${black}: 本脚本基于Arloor大佬的原脚本进行了一定修改，适用于STSDUST家的CentOS7.7镜像模板，实现了到IP的转发规则在重启后仍然有效"
 echo
 setupService(){
-    wget -qO /usr/local/bin/dnat.sh https://raw.githubusercontent.com/stsdust/EasySTSDUST/master/dnat.sh||{
+    wget -qO /usr/local/bin/dnat.sh --no-check-certificate https://raw.githubusercontent.com/stsdust/EasySTSDUST/master/dnat.sh||{
         echo "脚本不存在，请通过github提交issue通知作者"
         exit 1
     }
