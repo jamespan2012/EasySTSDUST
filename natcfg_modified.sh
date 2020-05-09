@@ -11,6 +11,8 @@ echo -e "${red}用途${black}: 便捷的设置iptables端口转发"
 echo -e "${red}注意1${black}: 到域名的转发规则在添加后需要等待2分钟才会生效，且在机器重启后仍然有效"
 echo -e "${red}注意2${black}: 到IP的转发规则在重启后会失效，这是iptables的特性"
 echo -e "${red}注意3${black}: 本脚本基于Arloor大佬的原脚本进行了一定修改，适用于STSDUST家的CentOS7.7镜像模板，实现了到IP的转发规则在重启后仍然有效"
+echo -e "${red}重要！！${black}: 使用该脚本前，请先到官网产品面板设置对应NAT转发策略！！！"
+echo -e "${red}教程地址${black}: https://github.com/stsdust/EasySTSDUST"
 echo
 setupService(){
     wget -qO /usr/local/bin/dnat.sh --no-check-certificate https://raw.githubusercontent.com/stsdust/EasySTSDUST/master/dnat.sh||{
@@ -69,7 +71,7 @@ rmIptablesNat(){
                 iptables -t nat  -D POSTROUTING $cell1
             done
         done
-        service iptables save
+        service iptables save > /dev/null
 }
 
 addDnat(){
@@ -173,7 +175,7 @@ addSnat(){
         iptables -t nat -A PREROUTING -p udp --dport $localport -j DNAT --to-destination $remotehost:$remoteport
         iptables -t nat -A POSTROUTING -p tcp -d $remotehost --dport $remoteport -j SNAT --to-source $localIP
         iptables -t nat -A POSTROUTING -p udp -d $remotehost --dport $remoteport -j SNAT --to-source $localIP
-        service iptables save
+        service iptables save > /dev/null
     else
         echo 请输入一个IP
         return 1

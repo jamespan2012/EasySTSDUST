@@ -18,8 +18,8 @@ iptables -t mangle -F
 service iptables save
 
 # 修改hosts文件以使github容易访问
-echo "199.232.28.133 raw.githubusercontent.com" >> /etc/hosts
-echo "140.82.114.3 github.com" >> /etc/hosts
+# echo "199.232.28.133 raw.githubusercontent.com" >> /etc/hosts
+# echo "140.82.114.3 github.com" >> /etc/hosts
 
 # 下载一键脚本并 执行
 wget -O natcfg.sh --no-check-certificate https://github.com/stsdust/EasySTSDUST/raw/master/natcfg_modified.sh && chmod +x natcfg.sh && bash natcfg.sh
